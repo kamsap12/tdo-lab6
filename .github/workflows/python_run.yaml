@@ -1,4 +1,4 @@
-name: Just run py
+name: Just run
 on: workflow_dispatch
 jobs:
   run-it:
@@ -6,5 +6,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       
-      - name: Run script
+      - name: Run script with env
         run: python3 script.py
+        env:
+          GREETING_MESSAGE: "Witaj z poziomu GitHub Actions!"
