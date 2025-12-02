@@ -1,1 +1,6 @@
-print("--- Skrypt Pythonowy został pomyślnie uruchomiony w GitHub Actions! ---")
+import os
+
+message = os.environ.get("GREETING_MESSAGE", "przykładowa wiadmość")
+
+print("--- Skrypt z Env ---")
+print(f"{message}")
